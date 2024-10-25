@@ -114,7 +114,7 @@ left: 88% !important;
 .swiper-pagination-bullet-active::before {
   content: "";
   position: absolute;
-  top: 50%; /* Adjusts position of the outer circle */
+  top: 50%; 
   left: 50%;
   transform: translate(-50%,-50%);
   width: 24px; /* Outer circle is larger */
@@ -153,7 +153,7 @@ top: 10%;
     bottom: 0px !important;
 }
 
-    /* Add styles for the second Swiper section */
+/* second swiper */
     .section-2-swiper {
       width: 100%;
       max-width: 100%;
@@ -166,9 +166,9 @@ top: 10%;
     }
 
     .section-2-swiper img {
-      width: 100%; /* Make images responsive */
-      max-width: 150px; /* Set a max-width for images */
-      border-radius: 8px; /* Add some rounded corners */
+      width: 100%; 
+      max-width: 150px; 
+      border-radius: 8px; 
     }
 
   </style>
@@ -219,8 +219,25 @@ top: 10%;
             </button>
           </div>
         </div>
-
-        <!-- Add more slides as needed -->
+  <!-- Slide 3 -->
+  <div class="swiper-slide relative">
+    <video class="video-bg" autoplay muted loop>
+      <source src="./video/header bg3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="absolute inset-0 flex flex-col justify-center items-start slide-content gap-6 md:gap-8 px-8 md:px-24 lg:px-36">
+      <h1 class="banner-sub-heading text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-2">Classic</h1>
+      <h1 class="banner-sub-heading-2 text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">Fashion</h1>
+      <p class="text-lg md:text-xl lg:text-2xl font-poppins text-white max-w-lg">
+        Fashion Stories That Embody Your Unique Journey<br>
+        and Evolve with You, Style with Us.
+      </p>
+      <button class="px-4 py-2 font-poppins banner-btn bg-[#192434] hover:bg-blue-700 text-white font-bold w-auto h-12 flex items-center">
+        Explore Collection <span class="ml-2 text-3xl">&rarr;</span>
+      </button>
+    </div>
+  </div>
 
       </div>
 
@@ -232,7 +249,7 @@ top: 10%;
     <div class="w-full max-w-full">
       <div class="section-2-swiper swiper">
         <div class="swiper-wrapper">
-          <!-- Add images to the second section swiper -->
+          
           <div class="swiper-slide">
             <img src="/image/Frame 2.png" alt="Image 1">
           </div>
@@ -271,12 +288,12 @@ top: 10%;
 
     var swiper2 = new Swiper('.section-2-swiper', {
       autoplay: {
-        delay: 3000, // Set the delay for image changes
+        delay: 3000, 
         disableOnInteraction: false,
       },
-      loop: true, // Make the slider loop infinitely
-      slidesPerView: 3, // Number of images visible at a time (adjust as needed)
-      spaceBetween: 10, // Space between slides
+      loop: true, 
+      slidesPerView: 3, 
+      spaceBetween: 10, 
     });
   </script>
 
