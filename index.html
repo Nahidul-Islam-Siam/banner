@@ -83,7 +83,7 @@ overflow-x: hidden;
 .swiper-pagination {
   position: absolute;
   top: 93% !important;
-left: 92% !important;
+left: 88% !important;
   z-index: 10;
   display: flex;
   gap:4px;
@@ -118,8 +118,9 @@ left: 92% !important;
 .swiper-pagination-bullet-active::before {
   content: "";
   position: absolute;
-  top: -4px; /* Adjusts position of the outer circle */
-  left: -4px;
+  top: 50%; /* Adjusts position of the outer circle */
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 24px; /* Outer circle is larger */
   height: 24px;
   border-radius: 50%;
@@ -159,8 +160,7 @@ top: 10%;
 </head>
 
 <body>
-
-  <div class="swiper border max-w-full h-screen relative">
+  <div class="swiper max-w-full h-screen relative">
     <div class="swiper-wrapper">
 
       <!-- Slide 1 -->
@@ -266,16 +266,20 @@ top: 10%;
 
 </div>
 
+
     <!-- Pagination -->
     <div class="swiper-pagination"></div>
 
     <!-- Navigation buttons -->
     <!-- <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div> -->
-  </div>
-
+ 
   <script>
     var swiper = new Swiper('.swiper', {
+    keyboard:{
+enabled:true,
+onlyInViewport:true,
+    },
       autoplay: {
         delay: 10000,
         disableOnInteraction: false,
