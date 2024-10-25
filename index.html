@@ -11,12 +11,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
   <style>
-    body, .swiper{
-overflow-x: hidden;
+    body, .swiper {
+      overflow-x: hidden;
     }
 
     .video-bg {
@@ -37,7 +36,7 @@ overflow-x: hidden;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.35); /* Increased transparency for readability */
+      background: rgba(0, 0, 0, 0.35);
       z-index: 1;
     }
 
@@ -47,10 +46,6 @@ overflow-x: hidden;
       max-width: 1200px;
       padding: 1rem;
     }
-    .slide-content p {
-  white-space: nowrap;
-}
-
 
     .banner-sub-heading {
       font-family: "Playfair", serif;
@@ -75,12 +70,13 @@ overflow-x: hidden;
     .banner-btn:hover {
       background-color: #2563eb; 
     }
-    .swiper{
+
+    .swiper {
       width: 100vw;
       max-width: 100vw;
     }
 
-.swiper-pagination {
+    .swiper-pagination {
   position: absolute;
   top: 93% !important;
 left: 88% !important;
@@ -156,76 +152,42 @@ top: 10%;
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
     bottom: 0px !important;
 }
+
+    /* Add styles for the second Swiper section */
+    .section-2-swiper {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .section-2-swiper .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section-2-swiper img {
+      width: 100%; /* Make images responsive */
+      max-width: 150px; /* Set a max-width for images */
+      border-radius: 8px; /* Add some rounded corners */
+    }
+
   </style>
 </head>
 
 <body class="mx-auto ">
+  <!-- 1st Swiper ASection -->
   <div class="hero-section">
+    <div class=" first-swiper swiper max-w-full h-screen relative">
+      <div class="swiper-wrapper">
 
-
-  <div class="swiper max-w-full h-screen relative">
-    <div class="swiper-wrapper">
-
-      <!-- Slide 1 -->
-      <div class="swiper-slide relative">
-        <!-- Video Background -->
-        <video class="video-bg" autoplay muted loop>
-          <source src="./video/header bg.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-
-        <div class="overlay"></div>
-
-        <div class="absolute inset-0 flex flex-col justify-center items-start slide-content gap-6 md:gap-8 px-8 md:px-24 lg:px-36">
-     
-          <h1 class="banner-sub-heading text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-2">Classic</h1>
-          <h1 class="banner-sub-heading-2 text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">Fashion</h1>
-          <p class="text-lg md:text-xl lg:text-2xl font-poppins text-white max-w-lg">
-            Fashion Stories That Embody Your Unique Journey<br>
-            and Evolve with You, Style with Us.
-          </p>
-          <button class="px-4 py-2 font-poppins banner-btn bg-[#192434] hover:bg-blue-700 text-white font-bold w-auto h-12 flex items-center">
-            Explore Collection <span class="ml-2 text-3xl">&rarr;</span> 
-          </button>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="swiper-slide relative">
-     
-        <video class="video-bg" autoplay muted loop>
-          <source src="./video/header bg2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-
-        <div class="overlay"></div>
-
-        <div class="absolute inset-0 flex flex-col justify-center items-start slide-content gap-6 md:gap-8 px-8 md:px-24 lg:px-36">
-     
-          <h1 class="banner-sub-heading text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-2">Classic</h1>
-          <h1 class="banner-sub-heading-2 text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">Fashion</h1>
-          <p class="text-lg md:text-xl lg:text-2xl font-poppins text-white max-w-lg">
-            Fashion Stories That Embody Your Unique Journey<br>
-            and Evolve with You, Style with Us.
-          </p>
-          <button class="px-4 py-2 font-poppins banner-btn bg-[#192434] hover:bg-blue-700 text-white font-bold w-auto h-12 flex items-center">
-            Explore Collection <span class="ml-2 text-3xl">&rarr;</span> <!-- Arrow icon -->
-          </button>
-        </div>
-      </div>
-
-        <!-- Slide 3 -->
+        <!-- Slide 1 -->
         <div class="swiper-slide relative">
-      
           <video class="video-bg" autoplay muted loop>
-            <source src="./video/header bg3.mp4" type="video/mp4">
+            <source src="./video/header bg.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-  
           <div class="overlay"></div>
-  
           <div class="absolute inset-0 flex flex-col justify-center items-start slide-content gap-6 md:gap-8 px-8 md:px-24 lg:px-36">
-          
             <h1 class="banner-sub-heading text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-2">Classic</h1>
             <h1 class="banner-sub-heading-2 text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">Fashion</h1>
             <p class="text-lg md:text-xl lg:text-2xl font-poppins text-white max-w-lg">
@@ -233,23 +195,19 @@ top: 10%;
               and Evolve with You, Style with Us.
             </p>
             <button class="px-4 py-2 font-poppins banner-btn bg-[#192434] hover:bg-blue-700 text-white font-bold w-auto h-12 flex items-center">
-              Explore Collection <span class="ml-2 text-3xl">&rarr;</span> <!-- Arrow icon -->
+              Explore Collection <span class="ml-2 text-3xl">&rarr;</span> 
             </button>
           </div>
         </div>
-        
 
+        <!-- Slide 2 -->
         <div class="swiper-slide relative">
-
           <video class="video-bg" autoplay muted loop>
-            <source src="./video/header bg3.mp4" type="video/mp4">
+            <source src="./video/header bg2.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-    
           <div class="overlay"></div>
-    
           <div class="absolute inset-0 flex flex-col justify-center items-start slide-content gap-6 md:gap-8 px-8 md:px-24 lg:px-36">
-          
             <h1 class="banner-sub-heading text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-2">Classic</h1>
             <h1 class="banner-sub-heading-2 text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">Fashion</h1>
             <p class="text-lg md:text-xl lg:text-2xl font-poppins text-white max-w-lg">
@@ -257,49 +215,50 @@ top: 10%;
               and Evolve with You, Style with Us.
             </p>
             <button class="px-4 py-2 font-poppins banner-btn bg-[#192434] hover:bg-blue-700 text-white font-bold w-auto h-12 flex items-center">
-              Explore Collection <span class="ml-2 text-3xl">&rarr;</span> <!-- Arrow icon -->
+              Explore Collection <span class="ml-2 text-3xl">&rarr;</span>
             </button>
           </div>
         </div>
-        
-        
+
+        <!-- Add more slides as needed -->
+
+      </div>
+
+      <div class="swiper-pagination first-swiper-pagination"></div>
     </div>
-     <!-- Slide 3 -->
-    
-
-</div>
-
-
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- Navigation buttons -->
-    <!-- <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div> -->
   </div>
 
-  <div class="Section-2 rounded-bl-lg rounded-br-lg  w-screen h-[142px] bg-[#192434] flex justify-center items-center">
-    <div class="w-full max-w-full"> <!-- Add your desired max-width here -->
-      <!-- Content goes here -->
-       <!-- Images -->
-        <div class="flex justify-center gap-5">
-          <img class=" " src="/image/Frame 2.png" alt="">
-          <img class="" src="/image/Frame 2 (1).png" alt="">
-
-          <img   class="" src="/image/Frame 2 (2).png" alt="">
-          
-          <img  class=" " src="/image/Frame 3.png" alt="">
-          <img  class="" src="/image/Frame 4.png" alt="">
+  <div class="section-2 rounded-bl-lg rounded-br-lg maxw-screen h-[142px] bg-[#192434] flex justify-center items-center">
+    <div class="w-full max-w-full">
+      <div class="section-2-swiper swiper">
+        <div class="swiper-wrapper">
+          <!-- Add images to the second section swiper -->
+          <div class="swiper-slide">
+            <img src="/image/Frame 2.png" alt="Image 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/Frame 2 (1).png" alt="Image 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/Frame 2 (2).png" alt="Image 3">
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/Frame 3.png" alt="Image 4">
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/Frame 4.png" alt="Image 5">
+          </div>
         </div>
+      </div>
     </div>
   </div>
-  
+
   <script>
-    var swiper = new Swiper('.swiper', {
-    keyboard:{
-enabled:true,
-onlyInViewport:true,
-    },
+    var swiper1 = new Swiper('.swiper', {
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
       autoplay: {
         delay: 10000,
         disableOnInteraction: false,
@@ -307,12 +266,17 @@ onlyInViewport:true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        
       },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+    });
+
+    var swiper2 = new Swiper('.section-2-swiper', {
+      autoplay: {
+        delay: 3000, // Set the delay for image changes
+        disableOnInteraction: false,
       },
+      loop: true, // Make the slider loop infinitely
+      slidesPerView: 3, // Number of images visible at a time (adjust as needed)
+      spaceBetween: 10, // Space between slides
     });
   </script>
 
