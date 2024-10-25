@@ -82,10 +82,11 @@ overflow-x: hidden;
 
 .swiper-pagination {
   position: absolute;
-  top: 95% !important;
-left: 95% !important;
+  top: 93% !important;
+left: 92% !important;
   z-index: 10;
   display: flex;
+  gap:4px;
   
 }
 
@@ -103,20 +104,28 @@ left: 95% !important;
 }
 
 /* Active Bullet */
+/* Active Bullet */
 .swiper-pagination-bullet-active {
-  background-color: #ffffff; /* White background for active bullet */
-  width: 18px;
-  height: 18px;
+  position: relative; /* Needed for outer circle positioning */
+  background-color: white; /* Gray color for the inner circle */
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.7); /* Thicker outer border for active state */
   transition: all 0.3s ease;
 }
 
-.swiper-pagination-bullet-active::after {
-  border: 5px solid yellow;
-  background-color: #ffffff; 
-  border-color: #D53434; 
-  transform: scale(1.2); 
+/* Outer Circle for Active Bullet */
+.swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  top: -4px; /* Adjusts position of the outer circle */
+  left: -4px;
+  width: 24px; /* Outer circle is larger */
+  height: 24px;
+  border-radius: 50%;
+  border: 0.5px solid white; /* Red outer circle */
+  background-color: transparent;
+  z-index: -1; /* Behind the inner circle */
 }
 
 
@@ -227,30 +236,32 @@ top: 10%;
         </div>
         
 
+        <div class="swiper-slide relative">
+
+          <video class="video-bg" autoplay muted loop>
+            <source src="./video/header bg3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+    
+          <div class="overlay"></div>
+    
+          <div class="absolute inset-0 flex flex-col justify-center items-start slide-content gap-6 md:gap-8 px-8 md:px-24 lg:px-36">
+          
+            <h1 class="banner-sub-heading text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-2">Classic</h1>
+            <h1 class="banner-sub-heading-2 text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">Fashion</h1>
+            <p class="text-lg md:text-xl lg:text-2xl font-poppins text-white max-w-lg">
+              Fashion Stories That Embody Your Unique Journey<br>
+              and Evolve with You, Style with Us.
+            </p>
+            <button class="px-4 py-2 font-poppins banner-btn bg-[#192434] hover:bg-blue-700 text-white font-bold w-auto h-12 flex items-center">
+              Explore Collection <span class="ml-2 text-3xl">&rarr;</span> <!-- Arrow icon -->
+            </button>
+          </div>
+        </div>
+        
+        
     </div>
      <!-- Slide 3 -->
-     <div class="swiper-slide relative">
-
-      <video class="video-bg" autoplay muted loop>
-        <source src="./video/header bg3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <div class="overlay"></div>
-
-      <div class="absolute inset-0 flex flex-col justify-center items-start slide-content gap-6 md:gap-8 px-8 md:px-24 lg:px-36">
-      
-        <h1 class="banner-sub-heading text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-2">Classic</h1>
-        <h1 class="banner-sub-heading-2 text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">Fashion</h1>
-        <p class="text-lg md:text-xl lg:text-2xl font-poppins text-white max-w-lg">
-          Fashion Stories That Embody Your Unique Journey<br>
-          and Evolve with You, Style with Us.
-        </p>
-        <button class="px-4 py-2 font-poppins banner-btn bg-[#192434] hover:bg-blue-700 text-white font-bold w-auto h-12 flex items-center">
-          Explore Collection <span class="ml-2 text-3xl">&rarr;</span> <!-- Arrow icon -->
-        </button>
-      </div>
-    </div>
     
 
 </div>
