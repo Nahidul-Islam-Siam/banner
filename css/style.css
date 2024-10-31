@@ -1,3 +1,156 @@
-h1{
-    color: red;
+body, .swiper {
+    overflow-x: hidden;
+  }
+
+  .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    width: 100vw;
+    max-width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+  }
+
+  .slide-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    padding: 1rem;
+  }
+
+  .banner-sub-heading {
+    font-family: "Playfair", serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .banner-sub-heading-2 {
+    font-family: "Kalam", cursive;
+    background: linear-gradient(to right, #D53434, #46DAFB, #DBF8E2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .banner-btn {
+    border-radius: 40px;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .banner-btn:hover {
+    background-color: #2563eb; 
+  }
+
+  .swiper {
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .swiper-pagination {
+position: absolute;
+top: 93% !important;
+left: 88% !important;
+z-index: 10;
+display: flex;
+gap:4px;
+
 }
+
+
+/* Default Pagination Bullets */
+.swiper-pagination-bullet {
+background-color: rgba(255, 255, 255, 0.5); /* Slightly transparent */
+width: 16px;
+height: 16px;
+border-radius: 50%;
+margin: 0 8px; /* Spacing between bullets */
+opacity: 1;
+border: 0.5px solid rgba(255, 255, 255, 0.5); /* Border similar to your Figma design */
+transition: all 0.3s ease;
+}
+
+/* Active Bullet */
+/* Active Bullet */
+.swiper-pagination-bullet-active {
+position: relative; /* Needed for outer circle positioning */
+background-color: white; /* Gray color for the inner circle */
+width: 16px;
+height: 16px;
+border-radius: 50%;
+transition: all 0.3s ease;
+}
+
+/* Outer Circle for Active Bullet */
+.swiper-pagination-bullet-active::before {
+content: "";
+position: absolute;
+top: 50%; 
+left: 50%;
+transform: translate(-50%,-50%);
+width: 24px; /* Outer circle is larger */
+height: 24px;
+border-radius: 50%;
+border: 0.5px solid white; /* Red outer circle */
+background-color: transparent;
+z-index: -1; /* Behind the inner circle */
+}
+
+
+/* Bullet hover effect */
+.swiper-pagination-bullet:hover {
+transform: scale(1.1); 
+background-color: rgba(255, 255, 255, 0.9); 
+}
+
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+top: 10%;
+}
+  
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff; 
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .swiper-wrapper{
+  padding-bottom: 30px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: 0px !important;
+}
+
+/* second swiper */
+  .section-2-swiper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-2-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-2-swiper img {
+    width: 100%; 
+    max-width: 150px; 
+    border-radius: 8px; 
+  }
