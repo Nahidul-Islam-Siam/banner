@@ -136,21 +136,22 @@
     }
 
     .section-2 {
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       max-width: 100%;
       background-color: #192434;
       padding: 0px 0;
       justify-items: center;
       justify-content: center;
+      padding:10;
     }
 
     .section-2-swiper {
-      display: flex !important; 
-      align-items: center !important;
-      justify-content: center !important;
+      display: flex; 
+      align-items: center;
+      justify-content: center;
       gap: 0;
       overflow: hidden;
     }
@@ -159,16 +160,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 10px ;
       transition: transform 0.3s;
     }
 
     .section-2-swiper img {
+      padding-top: auto;
       height: auto;
       align-items: center;
       justify-content: center;
-      display: block;
+      /* display: block; */
       /* width: 100%; */
-      /* max-width: 100%; */
+      max-width: 100%;
+      /* object-fit: contain; */
       /* border-radius: 8px; */
 
     }
@@ -259,8 +263,8 @@
 
   <!-- Second Section with Marquee Slider -->
   <div class="section-2">
-    <div class="section-2-swiper swiper">
-      <div class="swiper-wrapper">
+    <div class="section-2-swiper max-w-[1200px] swiper">
+      <div class="swiper-wrapper ">
         <div class="swiper-slide">
           <img src="/banner/assets/image/Frame 2.png" alt="Image 1">
         </div>
@@ -290,6 +294,10 @@
   <script>
     // Initialize First Swiper (Video Background)
     var swiper1 = new Swiper('.first-swiper', {
+      keyboard: {
+      enabled: true,
+      onlyInViewport: true, // Enable keyboard only when Swiper is in viewport
+    },
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
@@ -307,8 +315,10 @@
     // Initialize Second Swiper (Image Slider with Marquee Effect)
     const swiper2 = new Swiper('.section-2-swiper', {
       loop: true, // Continuous loop
-      slidesPerView: 5, // Number of slides to show
+      slidesPerView: 4, // Number of slides to show
       spaceBetween: 0,
+      // centeredSlides: true,
+      draggable: false,
       breakpoints: {
         // Adjust the number of slides based on screen size
         640: {
@@ -317,8 +327,14 @@
         768: {
           slidesPerView: 3,
         },
+        1000: {
+          slidesPerView: 4,
+        },
         1024: {
           slidesPerView: 4,
+          // allowTouchMove: false,
+          autoplay: true,
+          loop: true
         },
       },
     });
